@@ -1,0 +1,16 @@
+version: '3'
+services: 
+  jango:  #name of the services
+    image: nginx:latest
+    container_name: apple
+    ports: 
+      - "9847:80"  #add the port in firewall
+    volumes:
+      - tnt:/data  #not necessory
+    networks: 
+      - net1
+
+networks:
+  net1:
+volumes:
+  tnt:
